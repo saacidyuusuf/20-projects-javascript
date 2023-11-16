@@ -1,0 +1,76 @@
+
+.wiki{
+    display: grid;
+    place-items: center;
+    margin-top: 2rem;
+}
+
+.wiki img{
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 1.3rem;
+}
+
+.wiki input{
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: #efefef;
+}
+
+.wiki button{
+    margin-top: 0.40rem;
+    background-color: rgb(50, 159, 196);
+    color: white;
+    padding: 10px 30px;
+    border-radius: 12px;
+    font-size: 1.3rem;
+    font-style:oblique;
+    font-family: 'Courier New', Courier, monospace;
+    border: none;
+}
+.data{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
+    border-radius: 12px;
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+}
+
+
+.data a{
+    font-size: 1.2rem;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(64, 119, 136);
+    padding: 10px;
+    border-radius: 8px;
+    color: lightblue;
+    text-decoration: none;
+}
+
+.data p{
+    color: rgb(0, 0, 0);
+}
+
+.data h4{
+    color: white;
+    font-size: white;
+    font-size: 1.7rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+
+@media (min-width: 900px) {
+    .wiki img{
+        width: 40%;
+    }
+}
+@media (max-width:900px) {
+    .data{
+        grid-template-columns: repeat(2,1fr);
+        width: 95%;
+    }
+}

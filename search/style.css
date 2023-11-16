@@ -1,0 +1,54 @@
+
+
+.searchka{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 98%;
+    margin-top: 1.2rem;
+    margin: auto;
+}
+
+.search{
+    width: 70%;
+    padding: 12px;
+    border-radius: 4px;
+    border-color: burlywood;
+}
+
+.searchka label{
+    font-size: 1.2rem;
+}
+
+.searchka h3{
+    font-size: 1.4rem;
+}
+
+.card{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(214, 121, 87);
+    padding: 1px;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    border-radius: 12px;
+}
+
+.card input {
+    margin-right: 1rem;
+    padding: 4px;
+    width: 5%;
+}
+
+.card h1{
+    padding: 0;
+    margin-left: 0.30rem;
+    font-family:Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.card:hover{
+    background-color: #333;
+    color: white;
+}
+
