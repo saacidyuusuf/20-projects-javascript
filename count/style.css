@@ -1,0 +1,39 @@
+
+
+.counthaye{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin: auto;
+    padding: 20px 5px;
+    border-radius: 10px;
+    flex-direction: column;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+.counteska{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: center;
+    align-items: center;
+}
+
+.counteska span{
+    font-size: 1.5rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.count{
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0.40rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.counteska span{
+    margin: 0.10rem;
+}

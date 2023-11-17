@@ -1,5 +1,5 @@
 const url =
-  "https://en.wikipedia.org/w/api.php?action=query&list=search&srlimit=20&format=json&origin=*&srsearch=";
+  "https://en.wikipedia.org/w/api.php?action=query&list=search&srlimit=10&format=json&origin=*&srsearch=";
 
 const field = document.querySelector(".field");
 const form = document.querySelector(".form");

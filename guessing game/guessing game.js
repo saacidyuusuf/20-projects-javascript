@@ -1,14 +1,20 @@
 let guesses = 0;
+let result = document.querySelector(".result");
+let btn = document.querySelector(".btn");
 
-document.getElementById("submitbutton").onclick = function () {
+let answer = Math.floor(Math.random() * 10 + 1);
+
+btn.onclick = function () {
   let guess = document.getElementById("guessfield").value;
   guesses += 1;
 
   if (guess == answer) {
-    alert(`${answer} is the #. it took you  ${guesses} guesses`);
+    result.innerHTML = `<h1>${answer} is the number it took you  ${guesses} guesses</h1>`;
   } else if (guess < answer) {
-    alert("too small");
+    btn.innerHTML = `<h1>small</h1>`;
   } else {
-    alert("too large");
+    btn.innerHTML = `<h1>large</h1>`;
   }
+  guess.value = "";
 };
+

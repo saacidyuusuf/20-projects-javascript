@@ -10,11 +10,16 @@
 .choiceBtn{
     line-height: 30px;
     width: 150px;
+    border: none;
+    font-size: 1.2rem;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
 }
 #playerText{
-    color: blue;
+    color: rgb(229, 255, 0);
 }
 
 #computerText{
-    color: red;
+    color: rgb(85, 97, 31);
 }

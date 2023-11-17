@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <h1>NUmber gussing game</h1>
-    <p>pick a number 1 throw 10</p>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="guess">
+      <h1>Number gussing game</h1>
+      <p>pick a number 1 throw 10</p>
+      <label for="">Enter a guess</label>
+      <input id="guessfield" placeholder="guess" /><br />
+      <input type="submit" class="btn" />
+      <div class="result"></div>
+    </div>
 
-    <label for="">Enter a guess</label>
-    <input id="guessfield"><br>
-    
-    
-    <input type="submit" id="submitbutton">
     <script src="guessing game.js"></script>
-</body>
+  </body>
 </html>

@@ -43,7 +43,7 @@
 .data a{
     font-size: 1.2rem;
     font-family: 'Times New Roman', Times, serif;
-    background-color: rgb(64, 119, 136);
+    background-color: black;
     padding: 10px;
     border-radius: 8px;
     color: lightblue;
@@ -51,7 +51,7 @@
 }
 
 .data p{
-    color: rgb(0, 0, 0);
+    color:  rgb(64, 119, 136);
 }
 
 .data h4{

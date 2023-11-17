@@ -1,0 +1,27 @@
+
+.guess{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    width: 70%;
+    margin: auto;
+    border-radius: 10px;
+
+}
+
+.result{
+    color: red;
+}
+
+
+@media (min-width: 900px) {
+    .guess{
+        justify-content: left;
+        width: 40%;
+        padding-left: 1.5rem;
+        margin: auto;
+    }
+}

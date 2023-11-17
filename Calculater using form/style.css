@@ -1,0 +1,42 @@
+
+.calculater{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 65%;
+    margin: auto;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+form ,label{
+    font-size: 1.2rem;
+}
+
+form input{
+    width: 90%;
+    padding: 5px;
+    border-radius: 12px;
+    border: none;
+    margin-top: 0.22rem;
+    background-color: none;
+}
+
+.btnCalculate{
+    border: none;
+    padding: 4px;
+    margin-top: 0.50rem;
+    font-size: 1.2rem;
+    border-radius: 12px;
+}
+
+@media (min-width: 900px) {
+    .calculater{
+        justify-content: left;
+        width: 40%;
+        padding-left: 1.5rem;
+        margin: auto;
+    }
+}
