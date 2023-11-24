@@ -1,0 +1,103 @@
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.manage{
+    color: black;
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    position: relative;
+    margin-top: 4rem;
+    gap: 2rem;
+}
+
+.manage-btn-container{
+    margin-bottom: 1rem;
+    /* display: flex;
+    justify-content: center; */
+    
+}
+
+.manage-btn{
+    color: black;
+    padding: 7px;
+    border-color: white;
+    border: 1px solid white;
+    border-radius: 12px;
+    font-weight: 700;
+}
+
+.manage-btn:hover{
+    border: none;
+    color: lightgray;
+}
+
+.manage-contents{
+    display: none;
+}
+
+
+
+.manage-contents h2{
+    margin-bottom: 1rem ;
+    font-size: 3rem;
+    margin-top: 2.5rem;
+}
+
+.manage-contents p{
+    margin-bottom: 1.2rem;
+}
+
+.manage-btn-container img{
+    position: absolute;
+    top: 58%;
+    right: 34%;
+}
+
+.manage-img{
+    margin-top: 0;
+    display: none;
+    
+}
+.tabte{
+    display: inline;
+}
+
+.manage-img img{
+    width: 100%;
+    margin-top: 0;
+    border-radius: 10px;
+}
+.submit-btn{
+    text-decoration: none;
+    background-color: cornflowerblue;
+    padding: 8px;
+    margin-top: 0.40rem;
+    color: black;
+    font-weight: 900;
+    border-radius: 12px;
+    border: none;
+}
+
+.cadi{
+    display: block;
+}
+
+@media (max-width: 700px) {
+    .manage{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 1rem;
+    }
+    .manage-btn-container{
+        margin-bottom: 2rem;
+        border-top: 1px solid #ad792a;
+        width: 79%;
+    }
+}
+/*ebooks*/

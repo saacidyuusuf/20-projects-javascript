@@ -1,0 +1,25 @@
+
+
+.haye{
+    background-color: black;
+    display: grid;
+    place-items: center;
+    color: white;
+    border-radius: 12px;
+    width: 60%;
+    margin: auto;
+}
+
+.password input{
+    width: 100%;
+    padding: 3px;
+    margin-bottom: 0.30rem;
+}
+
+.password button{
+    background-color: black;
+    color: white;
+    font-size: 1.4rem;
+    border-color: white;
+    border-radius: 8px;
+}

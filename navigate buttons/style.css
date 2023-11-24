@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --padding-buttons: 8px 15px;
+    --bg-color: #e2d9d9;
+}
+
+.containert {
+    width: 80%;
+    margin: auto;
+}
+
+.exprience {
+    align-items: center;
+    margin-top: 4rem;
+}
+
+.exprience h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    color: #db1bd5;
+}
+
+.content-haye{
+   display: grid;
+   place-items: center;
+}
+
+
+.do-content {
+    background-color: #0c0b0c;
+    align-items: center;
+    width: 40%;
+    border-radius: 12px;
+    box-shadow: 0 0 8px 2px;
+}
+
+.do-content p {
+    color: white;
+    padding: 10px;
+    align-items: center;
+}
+
+.btns{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.btnsContent{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+
+.qabsasho {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    white-space: wrap;
+    text-align: center;
+    width: 40%;
+    margin-bottom: 1.4rem;
+}
+
+.qabsasho h2 {
+    color: cadetblue;
+}
+
+.skill {
+    align-items: center;
+}
+
+button {
+    background-color: var(--bg-color);
+    padding: var(--padding-buttons);
+    border: none;
+    margin: 8px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    box-shadow: 0 0 10px 3px #e2d9d9;
+}
+
+.cardHaye{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 2rem;
+}
+
+
+#Skills{
+    display: block;
+}
+
+.card-project{
+    margin: 1rem 1rem;
+    font-size: 1.4rem;
+    border: 1px solid rgb(93, 146, 148);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+
+.card-project a{
+    color: #333;
+    text-decoration: none;
+}
+
+
+@media (max-width: 1200px) {
+    .do-content {
+        width: 80%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .qabsasho {
+        width: 80%;
+        margin-bottom: 1.3rem;
+    }
+}
