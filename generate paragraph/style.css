@@ -1,0 +1,23 @@
+
+.paragrah{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+.btn{
+    margin-top: 0.40rem;
+    padding: 6px;
+    color: white;
+    cursor: pointer;
+    background-color: black;
+    border-color: white;
+    border-radius: 8px;
+}

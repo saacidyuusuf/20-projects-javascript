@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Baxar / Stores</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navka">
+      <button id="menu-btn"><i class="fa-solid fa-bars"></i></button>
+      <div class="logoandcart">
+        <a href="" class="logo">BaxarCoder</a>
+        <div class="cart-items toggle">
+          <div class="item">
+            <div class="imgQuantity">
+              <!--  <img src="/baxar-store/images/1.jpg" alt="" />
+                <h4>Hp laptop</h4>
+                <div>
+                  <i class="fa-solid fa-angle-up" id="up-1"></i>
+                  <p id="quantity-1">0</p>
+                  <i class="fa-solid fa-angle-down" id="down-1"></i>
+                </div>
+                <span>Price 18$</span>
+                <button class="remove">remove</button> -->
+            </div>
+          </div>
+          <div class="cart-total">
+            <h2>Total cart</h2>
+            <button id="total">50</button>
+          </div>
+        </div>
+      </div>
+      <ul class="nav-menu menu">
+        <li><a href="/baxar-store/index.html">Home</a></li>
+        <li><a href="/baxar-store/stores.html">Store</a></li>
+        <li><a href="/baxar-store/Contact.html">Contact</a></li>
+        <span class="cartNumber">0</span>
+        <i id="cartka" class="fa-solid fa-cart-shopping"></i>
+      </ul>
+    </nav>
+
+
+    <div class="flexStore containert">
+      <div class="inputHaye">
+        <input type="text" placeholder="enter" />
+        <div class="btns">
+          <button>all</button>
+          <button>hp</button>
+          <button>mac</button>
+          <button>linova</button>
+        </div>
+        <h4>Price</h4>
+        <input type="range" class="price-filter" min="0" value="50" max="100" />
+        <p class="price-value">value: 80$</p>
+      </div>
+      <section class="containert">
+        <div class="title-box">
+          <h1>Store <i class="fa-solid fa-cart-shopping"></i></h1>
+        </div>
+        <div class="row"></div>
+      </section>
+    </div>
+    <script src="baxar.js"></script>
+  </body>
+</html>

@@ -98,60 +98,7 @@ submitbn.addEventListener("click", () => {
     } else {
       quiz.innerHTML = `you answered ${score} 
     out of ${quizdata.length} question
-    <button onclick="location.reload()">load</button>`;
-    }
+    <button onclick="location.reload()">load</button>`
+    };
   }
 });
-
-/* function loadQuiz() {
-  deselect();
-  const currrentQuizData = quizdata[currentquiz];
-  questionEl.innerHTML = currrentQuizData.question;
-  atext.innerHTML = currrentQuizData.a;
-  btext.innerHTML = currrentQuizData.b;
-  ctext.innerHTML = currrentQuizData.c;
-  dtext.innerHTML = currrentQuizData.d;
-}
-
-function getSelected() {
-  const answerEls = document.querySelectorAll(".answer");
-
-  answerEls.forEach(function (answerel) {
-    if (answerel.checked) {
-      answer = answerel.id;
-    }
-    /* answer = answerel.checked ? answerel.id : answer;
-    
-  });
-  return answer;
-}
-function deselect() {
-  const answerEls = document.querySelectorAll(".answer");
-  answerEls.forEach(function (answerel) {
-    answerel.checked = false;
-  });
-
-  return answer; //kan hdi la turo wyhy u u shaqayna
-}
-
-submitbn.addEventListener("click", () => {
-  const answer = getSelected();
-  //console.log(answer)
-
-  if (answer) {
-    if (answer === quizdata[currentquiz].correct) {
-      score++;
-    }
-    currentquiz++;
-    if (currentquiz < quizdata.length) {
-      loadQuiz();
-      //this is going to be false becosuse
-      //current quiz will be greater
-    } else {
-      // todo: print result
-      quiz.innerHTML = `you answered ${score}/${quizdata.length}questions
-            <button onclick="location.reload()">load</button>`;
-    }
-  }
-});
- */

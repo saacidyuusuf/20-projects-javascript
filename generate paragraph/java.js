@@ -44,6 +44,7 @@ form.addEventListener("submit", (e) => {
 // -1
 // empty
 // >8
+
 if(isNaN(value) || value > 8 || value <=0){
     result.innerHTML = `${text[random]}`
 }else{
@@ -55,11 +56,6 @@ if(isNaN(value) || value > 8 || value <=0){
  textdisplay
  amount.value = ""
 }
-
-/* textdisplay = text.map(function(parag){
-    return `${parag}`
-}).join("")
-textdisplay.innerHTML = result */
 
 });
 

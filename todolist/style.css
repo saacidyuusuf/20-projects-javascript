@@ -32,13 +32,15 @@
 }
 
 .username button {
-  display: flex;
-  justify-content: left;
   padding: 6px;
   background-color: black;
   color: white;
   border-radius: 8px;
   border: none;
+}
+
+.remove{
+  border-color: white;
 }
 
 .username label {

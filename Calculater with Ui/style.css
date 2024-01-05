@@ -19,7 +19,6 @@ body{
     font-family: 'Kaushan Script', cursive;
 }
 
-
 .calculater form input{
     margin-top: 1rem;
     padding: 7px;
@@ -46,8 +45,7 @@ body{
 
 .rowsCalculate{
     display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 0.10rem;
+    grid-template-columns: repeat(4,auto);
     align-items: center;
     place-items: center;
 }
@@ -57,7 +55,7 @@ body{
     color: white;
     display: flex;
     justify-content: end;
-    margin-right: 3rem;
+    margin-right: 1rem;
     font-size: 2rem;
 }
 

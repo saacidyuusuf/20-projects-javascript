@@ -2,7 +2,7 @@ const next = document.querySelector(".next");
 const prev = document.querySelector(".prev");
 const random = document.querySelector("#random");
 
-const name = document.querySelector("#name");
+const names = document.querySelector("#name");
 const job = document.querySelector("#job");
 const content = document.querySelector(".content");
 const img = document.getElementById("img");
@@ -49,7 +49,7 @@ function showperson() {
   content.innerHTML = review[currentone].text; */
 
   const item = testi[currentone];
-  name.innerHTML = item.name;
+  names.innerHTML = item.name;
   job.innerHTML = item.job;
   content.innerHTML = item.text;
   img.src = testi[currentone].img;

@@ -1,0 +1,668 @@
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+:root {
+  --primary-1: #ffa439;
+  --primary-2: black;
+  --clr-primary-3: hsl(21, 62%, 45%);
+}
+#cartka {
+  font-size: 1.8rem;
+  margin-right: 0.2rem;
+  margin-top: 0.25rem;
+  cursor: pointer;
+  color: var(--primary-1);
+}
+
+.muuqa {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background-position: center;
+  overflow: hidden;
+  outline: none;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.navka{
+  position:fixed;
+  left: 0;
+  top: 0;
+  z-index: 11;
+}
+
+.background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin-left: 24rem;
+}
+
+.background img {
+  width: 60%;
+  margin: auto;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 0 10px 10px rgba(2, 2, 2, 0.87);
+}
+
+/*change navbar styles on scroll using javascript*/
+.window-scroll {
+  width: 100%;
+}
+
+.logo {
+  margin-left: 2rem;
+  font-size: 32px;
+  white-space: nowrap;
+  padding-right: 2rem;
+  color: var(--primary-1);
+  text-decoration: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-top: 0.2rem;
+  list-style-type: none;
+  display: flex;
+  display: inline-block;
+}
+
+nav ul li a {
+  text-decoration: none;
+  padding: 0 20px;
+  color: black;
+  font-size: 1.6rem;
+}
+
+.navka {
+  position: relative;
+}
+
+.logoandcart {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  position: relative;
+  background: transparent;
+  color: var(--clr-primary-3);
+  border: 1px solid black;
+  border-radius: 12px;
+  padding: 8px 19px;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 1;
+  margin-left: 2rem;
+}
+
+.btn button:hover span {
+  width: 100%;
+  color: white;
+}
+
+.btn button:hover {
+  border: none;
+}
+
+nav ul li a:hover {
+  color: var(--clr-primary-3);
+}
+
+#menu-btn {
+  position: absolute;
+  top: -0.25rem;
+  right: 1.5rem;
+  display: none;
+  font-size: 2rem;
+  flex-direction: column;
+  margin-top: 1rem;
+  background: none;
+  color: var(--clr-primary-3);
+  border: none;
+  margin-left: 2rem;
+}
+
+/* max-width screen hdii less than 400px hdu yhy
+samay waxa hose*/
+@media (max-width: 700px) {
+  #menu-btn {
+    display: block;
+  }
+  nav {
+    position: relative;
+  }
+  .nav-menu {
+    position: absolute;
+    display: none;
+    top: 100%;
+    right: 0;
+    width: 50%;
+    height: 15vh;
+    background-color: #383636;
+    border-radius: 4px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 3rem;
+    color: white;
+  }
+  .nav-menu li a {
+    color: white;
+  }
+  .nav-menu ul li a {
+    gap: 3rem;
+  }
+  .cartka {
+    margin-left: 2rem;
+    color: var(--clr-primary-3);
+  }
+
+  .background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150%;
+    margin-left: -6rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150%;
+    margin-left: -6rem;
+  }
+}
+
+.show-menu {
+  display: block;
+}
+
+@media (min-width: 900px) {
+  .navka {
+    position: relative;
+  }
+  .cartka i {
+    position: absolute;
+    left: 5%;
+  }
+}
+
+/*navbar*/
+
+.text-box {
+  position: absolute;
+  top: 25%;
+  left: 2%;
+}
+
+.text-box h1 {
+  font-family: "Kaushan Script", cursive;
+  font-size: 5rem;
+  color: black;
+  font-weight: 600;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.text-box span {
+  color: rgb(247, 179, 55);
+}
+
+.text-box p {
+  font-size: 20px;
+  color: black;
+  padding-top: 1rem;
+  margin-bottom: 0;
+  line-height: 30px;
+  margin-left: 2rem;
+  white-space: nowrap;
+}
+
+@media (min-width: 700px) {
+  .btn {
+    margin-top: 1.5rem;
+  }
+}
+
+/*labiary*/
+.containert {
+  padding: 15px 0;
+  max-width: 90%;
+  margin: auto;
+}
+
+.title-box {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.title-box h1 {
+  font-family: "Kaushan Script", cursive;
+  text-align: center;
+  color: var(--primary-1);
+  font-size: 5.5rem;
+  font-weight: bold;
+  margin-top: 0;
+}
+
+.title-box p {
+  line-height: 52px;
+  font-size: 2rem;
+}
+
+.row {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: auto;
+  padding-top: 1rem;
+  transition: 0.3 ease-in-out;
+}
+
+.col-3 {
+  text-align: center;
+  margin: auto;
+  position: relative;
+  flex-basis: 30%;
+  padding: 0 20px;
+}
+
+.col-3 img {
+  width: 130%;
+  border-radius: 10px;
+  aspect-ratio: 3/2;
+  border-color: var(--primary-1);
+  padding: 0 1rem;
+}
+
+@media (max-width: 900px) {
+  .text-box h1 {
+    font-size: 5rem;
+    white-space: nowrap;
+  }
+  .col-3 {
+    text-align: center;
+    margin: auto;
+  }
+  .col-3 img {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .col-3 {
+    flex-basis: 95%;
+  }
+}
+
+.cart {
+  text-align: center;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-size: 1rem;
+  border: none;
+  background-color: var(--clr-primary-3);
+  color: white;
+}
+
+.details {
+  position: absolute;
+  top: 40%;
+  left: 43%;
+  font-size: 1.5rem;
+  padding: 0.4rem;
+  color: red;
+  background-color: white;
+  border-radius: 12px;
+  transition: 0.3 ease-in;
+  display: none;
+}
+
+.Details1 {
+  position: absolute;
+  top: 40%;
+  left: 43%;
+  font-size: 1.5rem;
+  padding: 0.4rem;
+  color: red;
+  background-color: white;
+  border-radius: 12px;
+  transition: 0.3 ease-in;
+  display: none;
+}
+.Details2 {
+  position: absolute;
+  top: 40%;
+  left: 43%;
+  font-size: 1.5rem;
+  padding: 0.4rem;
+  color: red;
+  background-color: white;
+  border-radius: 12px;
+  transition: 0.3 ease-in;
+  display: none;
+}
+
+.col-3:hover .details {
+  display: block;
+}
+
+.details{
+  cursor: pointer;
+}
+
+span{
+  cursor: pointer;
+}
+
+/* cartka */
+
+.cartka {
+  cursor: pointer;
+  position: relative;
+}
+
+.cart-items {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 95%;
+  color: white;
+  width: 28%;
+  border-radius: 4px;
+  background-color: #221e1e;
+  border: 3px solid var(--primary-1);
+}
+
+.item {
+  text-align: center;
+}
+
+.cart-items img {
+  margin-top: 1rem;
+  border-radius: 12px;
+  width: 100%;
+  height: 12vh;
+  margin-bottom: 0;
+}
+
+.info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.info p {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.imgQuantity {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+
+.imgQuantity h4 {
+  margin-right: 1rem;
+  margin-left: 0.4rem;
+}
+
+.imgQuantity span {
+  color: var(--clr-primary-3);
+  font-size: 1.2rem;
+}
+
+.remove {
+  width: 60%;
+  margin: 0.7rem;
+  background-color: black;
+  color: white;
+  padding: 0.6rem;
+  outline: none;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+}
+
+.info h4 {
+  margin-right: 1rem;
+  color: var(--primary-1);
+}
+
+.showitems {
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .cart-items {
+    position: absolute;
+    right: 0;
+    top: 248%;
+    color: white;
+    width: 40%;
+    background-color: #221e1e;
+    border-radius: 4px;
+    border: 3px solid var(--primary-1);
+  }
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form-haye {
+  background-color: #221e1e;
+  color: white;
+  padding: 20px;
+  width: 40%;
+  border-radius: 8px;
+}
+
+form label {
+  font-size: 1.3rem;
+}
+
+form input {
+  display: block;
+  width: 100%;
+  padding: 3px;
+  margin-bottom: 0.45rem;
+  border-radius: 5px;
+}
+
+.submit {
+  color: var(--clr-primary-3);
+  border: 1px solid black;
+  border-radius: 12px;
+  padding: 4px 19px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.title {
+  font-size: 2rem;
+}
+
+.title h1 {
+  color: var(--primary-1);
+  font-family: "Kaushan Script", cursive;
+}
+
+@media (max-width: 900px) {
+  .form-haye {
+    background-color: #221e1e;
+    color: white;
+    padding: 10px;
+    width: 70%;
+  }
+}
+
+/* store */
+.flexStore {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  place-items: center;
+}
+
+.inputHaye input {
+  width: 100%;
+  padding: 4px;
+  border-radius: 3px;
+  border-color: #efefef;
+}
+
+.inputHaye input:focus {
+  outline-color: #ffa439;
+}
+
+.btns {
+  display: flex;
+  justify-content: flex-start;
+  align-items: start;
+  align-self: flex-start;
+  flex-direction: column;
+}
+
+.btns button {
+  display: flex;
+  justify-content: flex-start;
+  align-items: start;
+  padding: 4px 15px;
+  margin: 0.4rem;
+  width: 55%;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  border-color: #ffa439;
+}
+
+.allProduct {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  padding: 6px 4px;
+  border-radius: 6px;
+  border-color: var(--primary-1);
+  font-size: 1.3rem;
+}
+
+@media (max-width: 900px) {
+  .flexStore {
+    flex-wrap: wrap;
+  }
+  .btns {
+    display: flex;
+    flex-direction: row;
+  }
+  .containert {
+    padding: 20px 0;
+  }
+}
+
+.cartNumber{
+  position: absolute;
+  top: 1%;
+  right: 2%;
+  background-color: red;
+  color: white;
+  padding: 5px;
+  border-radius: 8px;
+}
+
+.cart-total{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.cart-total h2{
+  text-align: left;
+}
+
+#total{
+  margin-top: 1rem;
+  padding: 4px 45px;
+  background-color: white;
+  font-size: 1.6rem;
+  border: none;
+  outline: none;
+  color: black;
+  border-radius: 8px;
+}
+
+.totalhaye h1{
+  font-size: 2.3rem;
+  color: var(--clr-primary-3);
+}
+
+.totalhaye{
+  margin-top: 1.4rem;
+  text-align: center;
+}
+
+/* single product */
+
+.single-haye{
+  width: 90%;
+  margin: auto;
+  margin-top: 1.3rem;
+}
+
+.single-title{
+  margin-top: 0.30rem;
+}
+
+.single-product{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.single-product img{
+  width: 50%;
+}
+
+.details{
+  cursor: pointer;
+}
+
+.back{
+  cursor: pointer;
+  color: red;
+  font-size: 2rem;
+}
