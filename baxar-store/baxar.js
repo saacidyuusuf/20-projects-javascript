@@ -77,9 +77,11 @@ const showLaptops = (laptops) => {
           button.innerHTML = "Added to Cart";
           displayCartItem(selectedLaptop);
           cartCounter++;
+          toggle.classList.add("showitems");
           cart.push(selectedLaptop);
           updateCartNumber();
           calculateTotalPrice();
+
         } else {
           button.innerHTML = "Add to Cart";
           const cartItem = document.getElementById(

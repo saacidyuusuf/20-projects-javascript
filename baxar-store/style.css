@@ -32,12 +32,7 @@
   padding-top: 0;
 }
 
-.navka{
-  position:fixed;
-  left: 0;
-  top: 0;
-  z-index: 11;
-}
+
 
 .background {
   display: flex;
@@ -48,23 +43,24 @@
 }
 
 .background img {
-  width: 60%;
+  width: 70%;
   margin: auto;
+  margin-top: 2rem;
 }
 
 nav {
+  position: fixed;
+  top: 0;
+  z-index: 11;
   display: flex;
   justify-content: space-between;
   padding: 0.5rem;
   width: 100%;
   background-color: white;
   box-shadow: 0 0 10px 10px rgba(2, 2, 2, 0.87);
+  height: auto; 
 }
 
-/*change navbar styles on scroll using javascript*/
-.window-scroll {
-  width: 100%;
-}
 
 .logo {
   margin-left: 2rem;
@@ -90,9 +86,6 @@ nav ul li a {
   font-size: 1.6rem;
 }
 
-.navka {
-  position: relative;
-}
 
 .logoandcart {
   display: flex;
@@ -197,9 +190,9 @@ samay waxa hose*/
 }
 
 @media (min-width: 900px) {
-  .navka {
+ /*  .navka {
     position: relative;
-  }
+  } */
   .cartka i {
     position: absolute;
     left: 5%;
