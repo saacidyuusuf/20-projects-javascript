@@ -32,7 +32,6 @@ if (selectedLaptop) {
   const priceElement = document.querySelector("#price");
   const textElement = document.querySelector("#text");
   const imgElement = document.querySelector("#image");
-  const btncart = document.querySelector("#cart");
 
   titleElement.textContent = selectedLaptop.title;
   priceElement.textContent = `Price: $${selectedLaptop.price}`;

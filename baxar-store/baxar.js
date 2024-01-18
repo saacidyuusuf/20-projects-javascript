@@ -8,6 +8,7 @@ const checkout = document.querySelector(".checkout");
 const backtoshop = document.querySelector(".backtoshop");
 const isItEmpty = document.querySelector(".isItEmpty");
 const notification = document.querySelector(".notif");
+const counters = document.querySelectorAll('.count')
 
 const addToCartButtons = document.querySelectorAll(".cart");
 const store = [
@@ -243,9 +244,7 @@ const calculateTotalPrice = () => {
     totalPrice += laptop.price * quantity;
   });
 
-  /* cart.forEach((laptop) => {
-    totalPrice += laptop.price;
-  }); */
+ 
 
   totalBtn.textContent = `$${totalPrice}`;
 };
@@ -271,6 +270,32 @@ const displaymenu = () => {
 };
 
 displaymenu();
+
+
+/* product we selled count */
+
+counters.forEach((countwalba) =>{
+  countwalba.innerHTML = '0'
+  const countUpdate = () =>{
+    const target = Number(
+      countwalba.getAttribute('data-target')
+    )
+    //kan kore numbarad dataset bala so qday
+    const count = Number(countwalba.innerHTML)
+    //kan kore string aa number lo badalay
+    const inc = target / 50
+    if(count < target){
+      countwalba.innerHTML = 
+      `${Math.ceil(count + inc)}`
+      setTimeout(countUpdate,20)
+      //marwalbo count wxa ku darta 
+      // target oo lo qaybiyay 200
+    }else{
+      countwalba.innerHTML = target
+    }
+  }
+  countUpdate()
+})
 
 backtoshop.addEventListener("click", () => {
   cartka.addEventListener("click", () => {
