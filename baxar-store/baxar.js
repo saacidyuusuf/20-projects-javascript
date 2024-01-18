@@ -4,6 +4,11 @@ const menubtn = document.querySelector("#menu-btn");
 const dispalyrow = document.querySelector(".row");
 const toggle = document.querySelector(".toggle");
 const menu = document.querySelector(".menu");
+const checkout = document.querySelector(".checkout");
+const backtoshop = document.querySelector(".backtoshop");
+const isItEmpty = document.querySelector(".isItEmpty");
+const notification = document.querySelector(".notif");
+
 const addToCartButtons = document.querySelectorAll(".cart");
 const store = [
   {
@@ -33,16 +38,23 @@ const updateCartNumber = () => {
   const cartNumber = document.querySelector(".cartNumber");
   cartNumber.textContent = cartCounter;
 };
-
-const cart = [];
+let cart = [];
 let cartCounter = 0;
 
 window.addEventListener("DOMContentLoaded", () => {
   showLaptops(store);
 });
 
-const showLaptops = (laptops) => {
-  let displaylaptops = laptops
+const showLaptops = (laptops, searchQuery = "") => {
+  let filteredLaptops = laptops;
+
+  if (searchQuery) {
+    filteredLaptops = laptops.filter((laptop) =>
+      laptop.title.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+  }
+
+  let displaylaptops = filteredLaptops
     .map((lap) => {
       const { id, title, text, img, price } = lap;
       return `<div class="col-3" data-id="${id}">
@@ -77,19 +89,24 @@ const showLaptops = (laptops) => {
           button.innerHTML = "Added to Cart";
           displayCartItem(selectedLaptop);
           cartCounter++;
+
+          notification.innerHTML = `${selectedLaptop.title} added to the cart`;
+          notification.classList.add("show");
+          setTimeout(() => {
+            notification.classList.remove("show");
+          }, 2000);
+
+          isItEmpty.innerHTML = "you have items in cart";
           toggle.classList.add("showitems");
           cart.push(selectedLaptop);
           updateCartNumber();
           calculateTotalPrice();
-
         } else {
           button.innerHTML = "Add to Cart";
           const cartItem = document.getElementById(
             `cart-item-${selectedLaptop.id}`
           );
-          if (cartItem) {
-            cartItem.remove();
-          }
+          cartItem.remove();
           cart.splice(laptopIndex, 1);
           cartCounter--;
         }
@@ -153,6 +170,9 @@ const displayCartItem = (laptop) => {
       updateCartNumber();
       calculateTotalPrice();
     }
+    if (cart < 1) {
+      isItEmpty.innerHTML = "you shop cart is empty";
+    }
   });
 
   const quantityDiv = document.createElement("div");
@@ -161,11 +181,12 @@ const displayCartItem = (laptop) => {
   increaseButton.classList.add("fa-solid", "fa-angle-up");
   increaseButton.id = `up-${laptop.id}`;
 
-  const quantityDisplay = document.createElement("p");
+  let quantityDisplay = document.createElement("p");
   quantityDisplay.id = `quantity-${laptop.id}`;
-  quantityDisplay.textContent = "0";
+  quantityDisplay.textContent = "1";
+  quantityDisplay.classList.add("Quantity");
 
-  const decreaseButton = document.createElement("i");
+  let decreaseButton = document.createElement("i");
   decreaseButton.classList.add("fa-solid", "fa-angle-down");
   decreaseButton.id = `down-${laptop.id}`;
 
@@ -179,11 +200,34 @@ const displayCartItem = (laptop) => {
   imgQuantity.appendChild(removeButton);
   imgQuantity.appendChild(quantityDiv);
 
+  /* const button = createElement('button')
+  button.classList.add('checkout')
+  cartItem.appendChild(button)
+  button.textContent = 'checkout'  */
+
   cartItem.appendChild(imgQuantity);
   cartItems.appendChild(cartItem);
-};
 
-/* create item elemeents end */
+  /* create item elemeents end */
+
+  /* quantity increase */
+  let quantityCount = 1;
+
+  increaseButton.addEventListener("click", () => {
+    quantityCount++;
+    quantityDisplay.textContent = quantityCount;
+    calculateTotalPrice();
+  });
+
+  decreaseButton.addEventListener("click", () => {
+    if (quantityCount > 0) {
+      quantityCount--;
+      quantityDisplay.textContent = quantityCount;
+      calculateTotalPrice();
+    }
+  });
+  /* quantity increase */
+};
 
 /* total of items in cart */
 
@@ -192,31 +236,19 @@ const calculateTotalPrice = () => {
   let totalPrice = 0;
 
   cart.forEach((laptop) => {
-    totalPrice += laptop.price;
+    const laptopItem = document.getElementById(`cart-item-${laptop.id}`);
+    const quantity = parseInt(
+      laptopItem.querySelector(".Quantity").textContent
+    );
+    totalPrice += laptop.price * quantity;
   });
 
-  totalBtn.textContent = totalPrice;
+  /* cart.forEach((laptop) => {
+    totalPrice += laptop.price;
+  }); */
+
+  totalBtn.textContent = `$${totalPrice}`;
 };
-
-const urlParams = new URLSearchParams(window.location.search);
-const laptopId = parseInt(urlParams.get("id"));
-
-// Find the laptop with the matching ID in the store array
-const selectedLaptop = store.find((lap) => lap.id === laptopId);
-
-if (selectedLaptop) {
-  const titleElement = document.querySelector("#title");
-  const priceElement = document.querySelector("#price");
-  const textElement = document.querySelector("#text");
-  const imgElement = document.querySelector("#image");
-  const btncart = document.querySelector("#cart");
-
-  titleElement.textContent = selectedLaptop.title;
-  priceElement.textContent = `Price: $${selectedLaptop.price}`;
-  textElement.textContent = selectedLaptop.text;
-  imgElement.src = selectedLaptop.img;
-  imgElement.alt = selectedLaptop.title;
-}
 
 /* hooos basics */
 
@@ -227,6 +259,7 @@ const displaycart = () => {
 
   cart.forEach((laptop) => {
     displayCartItem(laptop);
+    saveCartToLocalStorage(laptop);
   });
 };
 displaycart();
@@ -238,3 +271,32 @@ const displaymenu = () => {
 };
 
 displaymenu();
+
+backtoshop.addEventListener("click", () => {
+  cartka.addEventListener("click", () => {
+    toggle.classList.remove("showitems");
+  });
+  window.location.replace("/baxar-store/stores.html");
+});
+
+/* window.addEventListener('click', function(event) {
+  if (!cartka.contains(event.target)) {
+      toggle.classList.remove("showitems");
+  }
+}); */
+
+/* Search laptop */
+
+const search = document.querySelector(".search");
+search.addEventListener("keyup", () => {
+  const searchQuery = search.value;
+  showLaptops(store, searchQuery);
+});
+
+checkout.addEventListener("click", () => {
+  if (cart.length < 1) {
+    alert("add product to the cart");
+  } else {
+    alert("Thank for purchasing our Product");
+  }
+});

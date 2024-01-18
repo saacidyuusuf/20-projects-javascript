@@ -244,6 +244,8 @@ samay waxa hose*/
 }
 
 .title-box {
+  display: flex;
+  flex-direction: column;
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
@@ -289,6 +291,11 @@ samay waxa hose*/
 }
 
 @media (max-width: 900px) {
+  .text-box {
+    position: absolute;
+    top: 25%;
+    left: -2%;
+  }
   .text-box h1 {
     font-size: 5rem;
     white-space: nowrap;
@@ -381,9 +388,11 @@ span{
   top: 95%;
   color: white;
   width: 28%;
+  height: 380px;
   border-radius: 4px;
   background-color: #221e1e;
   border: 3px solid var(--primary-1);
+  overflow: auto;
 }
 
 .item {
@@ -455,7 +464,7 @@ span{
     right: 0;
     top: 248%;
     color: white;
-    width: 40%;
+    width: 60%;
     background-color: #221e1e;
     border-radius: 4px;
     border: 3px solid var(--primary-1);
@@ -463,6 +472,7 @@ span{
 }
 
 .contact {
+  margin-top: 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -472,8 +482,9 @@ span{
 .form-haye {
   background-color: #221e1e;
   color: white;
-  padding: 20px;
+  padding: 10px;
   width: 40%;
+  height: 50vh;
   border-radius: 8px;
 }
 
@@ -484,9 +495,13 @@ form label {
 form input {
   display: block;
   width: 100%;
-  padding: 3px;
-  margin-bottom: 0.45rem;
-  border-radius: 5px;
+  padding: 7px;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+}
+
+form input::placeholder{
+  font-size: 1rem;
 }
 
 .submit {
@@ -507,7 +522,31 @@ form input {
   font-family: "Kaushan Script", cursive;
 }
 
+#submit{
+  padding: 7px 16px;
+  background-color: var(--clr-primary-3);
+  margin-top: 0.30rem;
+  border-radius: 12px;
+  border: none;
+  font-size: 1.4rem;
+  color: white;
+
+}
+
+.success{
+  color: green;
+  font-size: 1.2rem;
+}
+
+.msg{
+  color: red;
+  font-size: 1.2rem;
+}
+
 @media (max-width: 900px) {
+  .contact{
+    margin-top: 2rem;
+  }
   .form-haye {
     background-color: #221e1e;
     color: white;
@@ -563,10 +602,14 @@ form input {
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: auto;
   padding: 6px 4px;
+  background-color: var(--clr-primary-3);
   border-radius: 6px;
-  border-color: var(--primary-1);
+  text-decoration: none;
+  width: 10%;
+  margin: auto;
+  border-color: black;
+  color: white;
   font-size: 1.3rem;
 }
 
@@ -580,6 +623,9 @@ form input {
   }
   .containert {
     padding: 20px 0;
+  }
+  .allProduct{
+    width: 30%;
   }
 }
 
@@ -608,7 +654,7 @@ form input {
 
 #total{
   margin-top: 1rem;
-  padding: 4px 45px;
+  padding: 4px 60px;
   background-color: white;
   font-size: 1.6rem;
   border: none;
@@ -617,13 +663,18 @@ form input {
   border-radius: 8px;
 }
 
+.isItEmpty{
+  font-size: 1.4rem;
+  margin-bottom: 0;
+}
+
 .totalhaye h1{
   font-size: 2.3rem;
   color: var(--clr-primary-3);
 }
 
 .totalhaye{
-  margin-top: 1.4rem;
+  margin-top: 0.40rem;
   text-align: center;
 }
 
@@ -658,4 +709,65 @@ form input {
   cursor: pointer;
   color: red;
   font-size: 2rem;
+}
+
+.single-product  h1{
+  color: var(--primary-1);
+}
+
+.checkout{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 7px 18px;
+  background-color: var(--clr-primary-3);
+  border-radius: 12px;
+  border: none;
+  margin: auto;
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  color: white;
+}
+
+.cartbag{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-size: 5rem;
+}
+
+.backtoshop{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  font-size: 2.4rem;
+}
+
+.notif{
+  text-align: center;
+}
+
+.notif {
+  position: fixed;
+  bottom: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: black;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(245, 244, 244, 0.2);
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.notif.show {
+  bottom: 70%;
+  z-index: 9999 ;
+}
+
+.notif.hide {
+  opacity: 0;
+  pointer-events: none;
 }

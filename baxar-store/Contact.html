@@ -42,7 +42,7 @@
         </div>
       </div>
       <ul class="nav-menu menu">
-        <li><a href="#">Home</a></li>
+        <li><a href="/baxar-store/index.html">Home</a></li>
         <li><a href="/baxar-store/stores.html">Store</a></li>
         <li><a href="/baxar-store/Contact.html">Contact</a></li>
         <span class="cartNumber">0</span>
@@ -55,17 +55,19 @@
         <h1>form</h1>
       </div>
       <div class="form-haye">
-        <form action="">
+        <span class="msg"></span>
+        <span class="success"></span>
+        <form action="" id="form">
           <label for="">Enter your name</label>
-          <input type="text" placeholder="enter name" required/>
+          <input id="name" type="text" placeholder="enter name" required/>
           <label for="">Enter your gmail</label>
-          <input type="email" placeholder="enter gmail"  required/>
+          <input id="gmail" type="email" placeholder="enter gmail"  required/>
           <label for="">Enter a password</label>
-          <input type="password" placeholder="enter password" required>
-          <button class="submit">Submit</button>
+          <input id="password" type="password" placeholder="enter password" required>
+          <button id="submit">Submit</button>
         </form>
       </div>
     </div>
-    <script src="baxar.js"></script>
+    <script src="validation.js"></script>
   </body>
 </html>
