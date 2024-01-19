@@ -8,7 +8,7 @@ const checkout = document.querySelector(".checkout");
 const backtoshop = document.querySelector(".backtoshop");
 const isItEmpty = document.querySelector(".isItEmpty");
 const notification = document.querySelector(".notif");
-const counters = document.querySelectorAll('.count')
+const counters = document.querySelectorAll(".count");
 
 const addToCartButtons = document.querySelectorAll(".cart");
 const store = [
@@ -201,11 +201,6 @@ const displayCartItem = (laptop) => {
   imgQuantity.appendChild(removeButton);
   imgQuantity.appendChild(quantityDiv);
 
-  /* const button = createElement('button')
-  button.classList.add('checkout')
-  cartItem.appendChild(button)
-  button.textContent = 'checkout'  */
-
   cartItem.appendChild(imgQuantity);
   cartItems.appendChild(cartItem);
 
@@ -244,8 +239,6 @@ const calculateTotalPrice = () => {
     totalPrice += laptop.price * quantity;
   });
 
- 
-
   totalBtn.textContent = `$${totalPrice}`;
 };
 
@@ -271,31 +264,45 @@ const displaymenu = () => {
 
 displaymenu();
 
-
 /* product we selled count */
 
-counters.forEach((countwalba) =>{
-  countwalba.innerHTML = '0'
-  const countUpdate = () =>{
-    const target = Number(
-      countwalba.getAttribute('data-target')
-    )
+counters.forEach((countwalba) => {
+  countwalba.innerHTML = "0";
+  const countUpdate = () => {
+    const target = Number(countwalba.getAttribute("data-target"));
     //kan kore numbarad dataset bala so qday
-    const count = Number(countwalba.innerHTML)
+    const count = Number(countwalba.innerHTML);
     //kan kore string aa number lo badalay
-    const inc = target / 50
-    if(count < target){
-      countwalba.innerHTML = 
-      `${Math.ceil(count + inc)}`
-      setTimeout(countUpdate,20)
-      //marwalbo count wxa ku darta 
+    const inc = target / 50;
+    if (count < target) {
+      countwalba.innerHTML = `${Math.ceil(count + inc)}`;
+      setTimeout(countUpdate, 20);
+      //marwalbo count wxa ku darta
       // target oo lo qaybiyay 200
-    }else{
-      countwalba.innerHTML = target
+    } else {
+      countwalba.innerHTML = target;
     }
-  }
-  countUpdate()
-})
+  };
+  countUpdate();
+});
+
+/* scroll */
+
+const fadeIns = document.querySelectorAll(".fade-in");
+const sr = ScrollReveal();
+sr.reveal(fadeIns, {
+  origin: "bottom",
+  distance: "20px",
+  duration: 1000,
+  delay: 200,
+  easing: "ease",
+  reset: true,
+  viewFactor: 0.2,
+  opacity: 0,
+  scale: 0.9,
+});
+
+/* scroll end */
 
 backtoshop.addEventListener("click", () => {
   cartka.addEventListener("click", () => {

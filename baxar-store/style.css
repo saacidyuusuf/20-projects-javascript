@@ -266,13 +266,12 @@ samay waxa hose*/
 .row {
   text-align: center;
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   margin: auto;
   padding-top: 1rem;
   transition: 0.3 ease-in-out;
 }
-
 
 .col-3 {
   text-align: center;
@@ -290,8 +289,8 @@ samay waxa hose*/
 }
 
 @media (max-width: 900px) {
-  .row{
-    grid-template-columns: repeat(1,1fr);
+  .row {
+    grid-template-columns: repeat(1, 1fr);
   }
   .text-box {
     position: absolute;
@@ -781,11 +780,11 @@ form input::placeholder {
 
 .showCase {
   width: 90%;
-  height: 80vh;
+  height: 90vh;
   margin: auto;
   background-color: #080707;
   color: white;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
   border-radius: 7px;
 }
 
@@ -801,7 +800,7 @@ form input::placeholder {
   padding-top: 3rem;
 }
 
-.showboxText h4{
+.showboxText h4 {
   margin-top: 0;
   font-size: 1.4rem;
   color: white;
@@ -833,7 +832,7 @@ form input::placeholder {
   justify-content: space-evenly;
 }
 
-.counteska span{
+.counteska span {
   color: white;
 }
 
@@ -883,18 +882,20 @@ form input::placeholder {
     width: 90%;
     height: 130vh;
   }
+  .imgShowcase img {
+    width: 55%;
+  }
+  .text-box{
+    left: 3.5%;
+  }
 }
 
-
-.symbol{
+.symbol {
   color: var(--primary-1);
   font-size: 3rem;
 }
 
-
 /* footer */
-
-
 
 .portfolio-footer {
   width: 100%;
@@ -923,9 +924,8 @@ form input::placeholder {
   flex-wrap: wrap;
 }
 
-.por-two-foter h3{
+.por-two-foter h3 {
   margin: 4px 12px;
-  
 }
 
 .por-two-col {
@@ -945,11 +945,9 @@ form input::placeholder {
   margin-top: 1.4rem;
 }
 
-
 .por-icons i {
   margin: 4px;
 }
-
 
 .por-two-col h3 {
   margin: 5px;
@@ -963,3 +961,12 @@ form input::placeholder {
 .por-col h1 {
   text-transform: capitalize;
 }
+
+
+/* animation */
+.fade-in{
+  transform: translateY(20px);
+  transition: opacity 1s, transform 1s;
+}
+
+
