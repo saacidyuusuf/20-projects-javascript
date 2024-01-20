@@ -779,11 +779,10 @@ form input::placeholder {
 /* showcase section */
 
 .showCase {
-  width: 90%;
+  width: 95%;
   height: 90vh;
   margin: auto;
-  background-color: #080707;
-  color: white;
+  color: black;
   margin-bottom: 3rem;
   border-radius: 7px;
 }
@@ -803,10 +802,11 @@ form input::placeholder {
 .showboxText h4 {
   margin-top: 0;
   font-size: 1.4rem;
-  color: white;
+  color: var(--clr-primary-3);
 }
 
 .showboxText h1 {
+  font-family: "Kaushan Script", cursive;
   font-size: 3rem;
   margin-bottom: 1rem;
 }
@@ -833,23 +833,24 @@ form input::placeholder {
 }
 
 .counteska span {
-  color: white;
+  color: black;
 }
 
 .count {
-  background-color: rgb(235, 229, 229);
+  background-color: rgb(12, 11, 11);
   color: var(--primary-1);
   padding: 20px 32px;
   font-weight: 700;
   border-radius: 6px;
 }
 
-.count p {
-  font-size: 2rem;
+.tiro{
+  font-size: 2.5rem;
 }
 
 .imgShowcase img {
-  width: 70%;
+  width: 80%;
+  margin-top: 3rem;
 }
 
 .btnshowcase {

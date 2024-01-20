@@ -251,7 +251,6 @@ const displaycart = () => {
 
   cart.forEach((laptop) => {
     displayCartItem(laptop);
-    saveCartToLocalStorage(laptop);
   });
 };
 displaycart();
@@ -286,36 +285,6 @@ counters.forEach((countwalba) => {
   countUpdate();
 });
 
-/* scroll */
-
-const fadeIns = document.querySelectorAll(".fade-in");
-const sr = ScrollReveal();
-sr.reveal(fadeIns, {
-  origin: "bottom",
-  distance: "20px",
-  duration: 1000,
-  delay: 200,
-  easing: "ease",
-  reset: true,
-  viewFactor: 0.2,
-  opacity: 0,
-  scale: 0.9,
-});
-
-/* scroll end */
-
-backtoshop.addEventListener("click", () => {
-  cartka.addEventListener("click", () => {
-    toggle.classList.remove("showitems");
-  });
-  window.location.replace("/baxar-store/stores.html");
-});
-
-/* window.addEventListener('click', function(event) {
-  if (!cartka.contains(event.target)) {
-      toggle.classList.remove("showitems");
-  }
-}); */
 
 /* Search laptop */
 
@@ -324,6 +293,15 @@ search.addEventListener("keyup", () => {
   const searchQuery = search.value;
   showLaptops(store, searchQuery);
 });
+
+backtoshop.addEventListener("click", () => {
+  cartka.addEventListener("click", () => {
+    toggle.classList.remove("showitems");
+  });
+  window.location.replace("/baxar-store/stores.html");
+});
+
+
 
 checkout.addEventListener("click", () => {
   if (cart.length < 1) {
