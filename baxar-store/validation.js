@@ -7,6 +7,7 @@ const submitbtn = document.querySelector("#submit");
 let msg = document.querySelector('.msg')
 let success = document.querySelector('.success')
 
+
 form.addEventListener("submit", (e) => {
   e.preventDefault()
   let passvalue = password.value;

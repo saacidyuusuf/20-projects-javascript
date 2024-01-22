@@ -11,6 +11,7 @@ manage.addEventListener("click", function(e){
             btns.classList.remove("tabte")
             e.target.classList.add("tabte")
         })
+        
     mnagecontents.forEach(function (content) {
         content.classList.remove("cadi")
         content.classList.remove("tabte")

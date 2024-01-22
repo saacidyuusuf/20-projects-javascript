@@ -1,11 +1,13 @@
 const next = document.querySelector(".next");
 const prev = document.querySelector(".prev");
 const random = document.querySelector("#random");
-
-const names = document.querySelector("#name");
-const job = document.querySelector("#job");
+const names = document.querySelector(".names");
+const job = document.querySelector(".jobs");
 const content = document.querySelector(".content");
 const img = document.getElementById("img");
+
+console.log(names)
+console.log(job)
 
 const testi = [
   {
@@ -63,6 +65,7 @@ next.addEventListener('click', () => {
     }
     showperson()
 })
+
 
 prev.addEventListener('click', () => {
     currentone++

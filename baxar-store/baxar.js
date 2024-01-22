@@ -95,7 +95,7 @@ const showLaptops = (laptops, searchQuery = "") => {
           notification.classList.add("show");
           setTimeout(() => {
             notification.classList.remove("show");
-          }, 2000);
+          },1000);
 
           isItEmpty.innerHTML = "you have items in cart";
           toggle.classList.add("showitems");
