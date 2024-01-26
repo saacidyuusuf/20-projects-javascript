@@ -25,7 +25,6 @@
   width: 100%;
   min-height: 100vh;
   position: relative;
-  background-position: center;
   overflow: hidden;
   outline: none;
   margin-top: 0;
@@ -33,17 +32,16 @@
 }
 
 .background {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 90%;
-  margin-left: 24rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  place-self: center;
+  flex-wrap: wrap;
+  margin-top: 3rem;
 }
 
 .background img {
-  width: 70%;
-  margin: auto;
-  margin-top: 2rem;
+  width: 100%;
 }
 
 nav {
@@ -131,9 +129,7 @@ nav ul li a:hover {
   margin-left: 2rem;
 }
 
-/* max-width screen hdii less than 400px hdu yhy
-samay waxa hose*/
-@media (max-width: 700px) {
+@media (max-width: 900px) {
   #menu-btn {
     display: block;
   }
@@ -164,23 +160,13 @@ samay waxa hose*/
     margin-left: 2rem;
     color: var(--clr-primary-3);
   }
-
   .background {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 150%;
-    margin-left: -6rem;
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 0;
   }
-}
-
-@media (max-width: 1200px) {
-  .background {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 150%;
-    margin-left: -6rem;
+  .background img {
+    margin: auto;
+    width: 100%;
   }
 }
 
@@ -189,9 +175,6 @@ samay waxa hose*/
 }
 
 @media (min-width: 900px) {
-  /*  .navka {
-    position: relative;
-  } */
   .cartka i {
     position: absolute;
     left: 5%;
@@ -201,9 +184,11 @@ samay waxa hose*/
 /*navbar*/
 
 .text-box {
-  position: absolute;
-  top: 25%;
-  left: 2%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
 }
 
 .text-box h1 {
@@ -211,7 +196,6 @@ samay waxa hose*/
   font-size: 5rem;
   color: black;
   font-weight: 600;
-  white-space: nowrap;
   text-align: center;
 }
 
@@ -225,19 +209,11 @@ samay waxa hose*/
   padding-top: 1rem;
   margin-bottom: 0;
   line-height: 30px;
-  margin-left: 2rem;
-  white-space: nowrap;
-}
-
-@media (min-width: 700px) {
-  .btn {
-    margin-top: 1.5rem;
-  }
+  margin-left: 1rem;
 }
 
 /*labiary*/
 .containert {
-  padding: 15px 0;
   max-width: 90%;
   margin: auto;
 }
@@ -245,8 +221,6 @@ samay waxa hose*/
 .title-box {
   display: flex;
   flex-direction: column;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
 }
 
 .title-box h1 {
@@ -256,10 +230,13 @@ samay waxa hose*/
   font-size: 5.5rem;
   font-weight: bold;
   margin-top: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
 }
 
 .title-box p {
-  line-height: 52px;
+  line-height: 40px;
   font-size: 2rem;
 }
 
@@ -292,14 +269,8 @@ samay waxa hose*/
   .row {
     grid-template-columns: repeat(1, 1fr);
   }
-  .text-box {
-    position: absolute;
-    top: 25%;
-    left: -2%;
-  }
   .text-box h1 {
     font-size: 5rem;
-    white-space: nowrap;
   }
   .col-3 {
     text-align: center;
@@ -309,9 +280,39 @@ samay waxa hose*/
     width: 100%;
     border-radius: 10px;
   }
-
   .col-3 {
     flex-basis: 95%;
+  }
+}
+
+@media screen and (device-width: 320px) and (device-height: 512px) and (-webkit-device-pixel-ratio: 4) {
+  .text-box h1 {
+    font-size: 1rem;
+  }
+  .text-box {
+    margin-right: 1.4rem;
+  }
+}
+/* s9+ */
+@media screen and (device-width: 320px) and (device-height: 658px) and (-webkit-device-pixel-ratio: 4) {
+  .text-box h1 {
+    font-size: 0.5rem;
+  }
+}
+/*g s9+ */
+@media screen and (device-width: 1440px) and (device-height: 2960px) {
+  .text-box h1 {
+    font-size: 0.5rem;
+  }
+}
+
+/* s8+ */
+@media screen and (device-width: 360px) and (device-height: 740px) and (-webkit-device-pixel-ratio: 4) {
+  .text-box {
+    margin-right: 1.4rem;
+  }
+  .text-box h1 {
+    font-size: 4rem;
   }
 }
 
@@ -814,7 +815,7 @@ form input::placeholder {
   margin-bottom: 3rem;
 }
 
-.online{
+.online {
   color: var(--primary-1);
 }
 
@@ -847,7 +848,7 @@ form input::placeholder {
   border-radius: 6px;
 }
 
-.tiro{
+.tiro {
   font-size: 2.5rem;
 }
 
@@ -890,9 +891,6 @@ form input::placeholder {
   .imgShowcase img {
     width: 100%;
     height: 50vh;
-  }
-  .text-box{
-    left: 3.5%;
   }
 }
 
@@ -968,11 +966,8 @@ form input::placeholder {
   text-transform: capitalize;
 }
 
-
 /* animation */
-.fade-in{
+.fade-in {
   transform: translateY(20px);
   transition: opacity 1s, transform 1s;
 }
-
-
